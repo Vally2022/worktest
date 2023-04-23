@@ -1,0 +1,32 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card card-plain">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Detail</h4>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <div>
+                            <strong>ID:</strong>
+                            <p>{{ post.id }}</p>
+                        </div>
+
+                        <div>
+                            <strong>Title:</strong>
+                            <p>{{ post.title }}</p>
+                        </div>
+
+                        <div>
+                            <strong>Body:</strong>
+                            <p>{{ post.body }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button mat-raised-button type="submit" class="btn btn-primary pull-right"
+                routerLink="/table-list">Back</button>
+        </div>
+    </div>
+</div>

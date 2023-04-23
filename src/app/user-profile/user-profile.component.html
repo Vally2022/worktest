@@ -1,0 +1,46 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Create New Post</h4>
+            <p class="card-category">Complete your profile</p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="form" (ngSubmit)="submit()">
+              <div class="row">
+                <div class="col-md-3">
+
+                  <mat-form-field class="example-full-width">
+                    <input matInput formControlName="title" placeholder="Title">
+                    <div *ngIf="f['title'].touched && f['title'].invalid" class="alert alert-danger">
+                      <div *ngIf="f['title'].errors && f['title'].errors['required']">Title is required.</div>
+                    </div>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+
+                  <mat-form-field class="example-full-width">
+                    <input matInput formControlName="body" placeholder="Body">
+                  </mat-form-field>
+                  <div *ngIf="f['body'].touched && f['body'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['body'].errors && f['body'].errors['required']">Body is required.</div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+
+              <button mat-raised-button type="submit" class="btn btn-danger pull-right" [disabled]="!form.valid">Update
+                Profile</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
