@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
-import { BrowserModule  } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { DetailPageComponent } from './components/detail-page/detail-page.component';
-import { UpdatePostComponent } from './components/update-post/update-post.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
-const routes: Routes =[
-  {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, 
+const routes: Routes = [
+  {path:'',
+  redirectTo:'login-page'
+
+  },
+
   {
     path: '',
     component: AdminLayoutComponent,
@@ -22,13 +21,11 @@ const routes: Routes =[
     }]
   },
   {
-    path: 'table-list/:postId/view',
-    component:DetailPageComponent
+    path: 'login-page',
+    component: LoginPageComponent,
+    pathMatch: 'full',
   },
-  {
-    path: 'table-list/:postId/edit',
-    component:UpdatePostComponent
-  }
+
 ];
 
 @NgModule({

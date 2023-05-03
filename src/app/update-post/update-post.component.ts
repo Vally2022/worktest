@@ -35,6 +35,7 @@ export class UpdatePostComponent implements OnInit {
   submit(){
     console.log(this.form.value);
     this.service.update(this.id, this.form.value).subscribe((res:any) => {
+      this.post = res
          console.log('Post updated successfully!');
          this.router.navigateByUrl('table-list');
     })

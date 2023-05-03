@@ -12,10 +12,13 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
-import { UpdatePostComponent } from 'app/components/update-post/update-post.component';
-import { DetailPageComponent } from 'app/components/detail-page/detail-page.component';
+import { UpdatePostComponent } from 'app/update-post/update-post.component';
+import { DetailPageComponent } from 'app/detail-page/detail-page.component';
 import {MatIconModule} from '@angular/material/icon'
 import {MatCardModule} from '@angular/material/card';
+import { LoginPageComponent } from 'app/login-page/login-page.component';
+import { BlogPostFirstComponent } from 'app/blog-post-first/blog-post-first.component';
+import { BlogPostSecondComponent } from 'app/blog-post-second/blog-post-second.component';
 
 @NgModule({
   imports: [
@@ -39,6 +42,9 @@ import {MatCardModule} from '@angular/material/card';
     TableListComponent,
     UpdatePostComponent,
     DetailPageComponent,
+    LoginPageComponent,
+    BlogPostFirstComponent,
+    BlogPostSecondComponent,
   
     
   ]

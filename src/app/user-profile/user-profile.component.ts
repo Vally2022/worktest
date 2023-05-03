@@ -27,7 +27,7 @@ export class UserProfileComponent implements OnInit {
   submit(){
     console.log(this.form.value);
     this.service.create(this.form.value).subscribe((res:any) => {
-         console.log('Post created successfully!');
+         alert('Modifica avvenuta con successo');
          this.router.navigateByUrl('table-list');
     })
   }
